@@ -62,6 +62,7 @@ interface Emits {
   (e: 'close'): void;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const props = defineProps<Props>();
 const emit = defineEmits<Emits>();
 

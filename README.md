@@ -55,7 +55,6 @@ This project serves as a **demonstration** of:
   - Delete products
   - View all products in table format
   - Real-time data from backend API
-  - **Note**: In this demo, admin panel is integrated into the frontend for convenience. In production systems, admin panels are typically separate applications with proper authentication and authorization.
 - Responsive navigation
 - Contact form with validation styling
 - Social media integration
@@ -143,7 +142,6 @@ This demo is designed to be **extensible and customizable**. Here are some areas
 - **Add product variants** (size, color, etc.)
 - **Add multiple product images** with gallery/slider functionality
 - **Create a blog section** for content marketing
-- **Separate admin panel** into its own application with proper authentication
 
 ### Backend Improvements
 - **Add user management** with JWT authentication
@@ -174,11 +172,6 @@ This demo is designed to be **extensible and customizable**. Here are some areas
 
 - **Demo Data**: All products and testimonials are sample data
 - **No Real Payments**: Checkout process is simulated
-- **Admin Panel Integration**: In this demo, the admin panel is integrated into the frontend application for convenience. In production systems, admin panels are typically:
-  - Separate applications with their own authentication
-  - Protected by proper authorization and role-based access
-  - Deployed on different domains/subdomains
-  - Have dedicated security measures
 - **Local Development**: Designed for local development and learning
 - **Open Source**: Feel free to fork and modify for your projects
 

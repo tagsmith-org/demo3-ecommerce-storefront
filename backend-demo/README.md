@@ -15,16 +15,6 @@ This backend serves as a **demonstration** of:
 
 **This is NOT a complete, production-ready backend solution.** Users are encouraged to modify, extend, and customize this demo according to their specific needs.
 
-## 📋 Architecture Notes
-
-### Admin Panel Integration
-In this demo, the admin panel is integrated into the frontend application for simplicity. In production systems:
-- **Admin panels are typically separate applications** with their own frontend
-- **Authentication and authorization** are handled separately
-- **Different deployment strategies** (separate domains, subdomains)
-- **Enhanced security measures** for admin access
-- **Role-based access control** (RBAC) for different admin levels
-
 ## 🚀 Features
 
 - **RESTful API** for products and orders
@@ -258,7 +248,6 @@ This demo backend can be extended with:
 - **Add logging** and monitoring
 - **Create backup** and restore functionality
 - **Add automated testing**
-- **Separate admin panel** into dedicated application with proper security
 
 ## 📞 Support
 
