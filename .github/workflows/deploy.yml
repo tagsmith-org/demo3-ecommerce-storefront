@@ -32,10 +32,10 @@ jobs:
           port: ${{ secrets.SERVER_PORT }}
           script: |
             # Создаем бэкап текущей версии
-            sudo cp -r /var/www/demo1.websmith-shop.com /var/www/demo1.websmith-shop.com.backup.$(date +%Y%m%d_%H%M%S) || true
+            sudo cp -r /var/www/3.websmith-shop.com /var/www/demo3.websmith-shop.com.backup.$(date +%Y%m%d_%H%M%S) || true
             
             # Очищаем директорию
-            sudo rm -rf /var/www/demo1.websmith-shop.com/*
+            sudo rm -rf /var/www/demo3.websmith-shop.com/*
             
       - name: Upload files
         uses: appleboy/scp-action@v0.1.7
@@ -45,7 +45,7 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           port: ${{ secrets.SERVER_PORT }}
           source: "dist/"
-          target: "/var/www/demo1.websmith-shop.com"
+          target: "/var/www/demo3.websmith-shop.com"
           strip_components: 0
           
       - name: Set permissions and restart
@@ -57,12 +57,12 @@ jobs:
           port: ${{ secrets.SERVER_PORT }}
           script: |
             # Перемещаем файлы из dist в корень и удаляем dist
-            sudo cp -r /var/www/demo1.websmith-shop.com/dist/* /var/www/demo1.websmith-shop.com/
-            sudo rm -rf /var/www/demo1.websmith-shop.com/dist
+            sudo cp -r /var/www/demo3.websmith-shop.com/dist/* /var/www/demo3.websmith-shop.com/
+            sudo rm -rf /var/www/demo3.websmith-shop.com/dist
             
             # Устанавливаем правильные права
-            sudo chown -R www-data:www-data /var/www/demo1.websmith-shop.com
-            sudo chmod -R 755 /var/www/demo1.websmith-shop.com
+            sudo chown -R www-data:www-data /var/www/demo3.websmith-shop.com
+            sudo chmod -R 755 /var/www/demo3.websmith-shop.com
             
             # Перезапускаем nginx
             sudo systemctl reload nginx

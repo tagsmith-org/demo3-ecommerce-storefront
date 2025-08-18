@@ -215,14 +215,14 @@ const loadProducts = async () => {
 };
 
 // Watch for changes in search and filters
-const debouncedLoad = ref<NodeJS.Timeout | null>(null);
+const debouncedLoad = ref<number | null>(null);
 
 const updateProducts = () => {
     if (debouncedLoad.value) {
         clearTimeout(debouncedLoad.value);
     }
 
-    debouncedLoad.value = setTimeout(() => {
+    debouncedLoad.value = window.setTimeout(() => {
         loadProducts();
     }, 300); // Debounce for 300ms
 };
