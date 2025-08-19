@@ -89,8 +89,8 @@
                         </div>
                     </div>
 
-                    <button class="btn-primary">
-                        Learn More About Us
+                    <button @click="scrollToSection('contact')" class="btn-primary">
+                        Contact Us
                     </button>
                 </div>
 
@@ -125,5 +125,10 @@
 </template>
 
 <script setup lang="ts">
-// No additional logic needed for this component
+function scrollToSection(sectionId: string) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+    }
+}
 </script>

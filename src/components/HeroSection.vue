@@ -16,10 +16,10 @@
           </div>
 
           <div class="flex flex-col sm:flex-row gap-4">
-            <button class="btn-primary">
+            <button @click="scrollToSection('products')" class="btn-primary">
               Shop Now
             </button>
-            <button class="btn-secondary">
+            <button @click="scrollToSection('about')" class="btn-secondary">
               Learn More
             </button>
           </div>
@@ -88,4 +88,10 @@
 
 <script setup lang="ts">
 // No additional logic needed for this component
+function scrollToSection(sectionId: string) {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+}
 </script>

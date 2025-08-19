@@ -1,5 +1,8 @@
 <template>
     <div class="min-h-screen bg-background">
+        <!-- Demo Info Panel -->
+        <DemoInfoPanel />
+
         <!-- Header -->
         <header class="bg-white shadow-sm border-b border-gray-200">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -81,6 +84,7 @@ import ContactSection from './ContactSection.vue';
 import CartModal from './CartModal.vue';
 import CheckoutModal from './CheckoutModal.vue';
 import OrderConfirmation from './OrderConfirmation.vue';
+import DemoInfoPanel from './DemoInfoPanel.vue';
 import { productsApi } from '../services/api';
 import type { CartItem } from '../types';
 
